@@ -17,9 +17,18 @@ Deriving differential equations of motion of discrete systems (e.g. double pendu
 &nbsp; &nbsp;<code>end do;</code><br> 
 <i>substitution of mutual relations between velocities and generalized displacements</i><br>
  &nbsp; &nbsp;<code>rel_r_q := seq(r[i] (t) = diff(q[i] (t), t), i = 1 .. n);</code><br>
- <i>generating the equation of motion</i>
+ <i>generating the equation of motion</i><br>
   &nbsp; &nbsp;<code>for i to n do</code><br>
    &nbsp; &nbsp;&nbsp; &nbsp;<code>row[i] := subs(rel_r_q, Lrt[i] - Lq[i] = 0);</code><br>
   &nbsp; &nbsp;<code>end do;</code><br>
   &nbsp; &nbsp;<code>seq(row[i], i = 1 .. n);</code><br>
 <code>end proc</code>
+<br><br>
+<p>The formal parameters of the procedure are:</p>
+<ul>
+<li>n – number of degrees of freedom,</li>
+ <li>q – name of the indexed variable defining generalized coordinates,</li>
+ <li>r – name of the indexed variable defining generalized velocities,</li>
+ <li>L – Lagrange function.</li> <br>
+ </ul>
+ The global variables row[1], ..., row[n] were assigned the searched equations of motion.
