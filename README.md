@@ -1,5 +1,5 @@
 # Deriving differential equations
-Deriving differential equations of motion of discrete systems (e.g. double pendulum). To derive the equations of motion, I'm using the Lagrangian procedure, which generates differential equations of motion based on Lagrangian equations of the second type.<br><br>
+Deriving differential equations of motion of discrete systems (e.g. double pendulum). To derive the equations of motion, I'm using the Lagrangian procedure, which generates differential equations of motion based on Lagrangian equations of the second kind.<br><br>
 
 <code>lagrange := proc(n, q, r, L)</code> <br>
 &nbsp; &nbsp;<code>local i, uzm_q, uzm_r, rel_r_q, Lq, Lr, Lrt;</code><br>
